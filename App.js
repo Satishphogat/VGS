@@ -43,16 +43,14 @@ export default class Login extends Component {
         this.isLoginValid = true
       }
     }
-
-
   }
 
   render() {
     return (
-
+      <ScrollView>
       <View style={style.container}>
-        
-        <Image source={require('./Assets/home.jpeg')} style={{ top:0, height: Dimensions.get('window').height, left:0, right:0 }}></Image>
+
+        <Image source={require('./Assets/home.jpeg')} style={{ flex: 2 }}></Image>
 
         <View style={style.bottomContainer}>
 
@@ -98,6 +96,7 @@ export default class Login extends Component {
         </View>
 
       </View>
+      </ScrollView>
     );
   }
 }
@@ -138,10 +137,11 @@ const style = StyleSheet.create({
   bottomContainer: {
     backgroundColor: '#f9f9f9',
     position: 'absolute',
-    top: (Dimensions.get('window').height / 2) + 20,
+    //top: (Dimensions.get('window').height / 2) + 20,
     left: 0,
     right: 0,
-    bottom: 0
+    bottom: 0,
+    flex: 2
   },
   textFieldContainer: {
     position: 'absolute',
