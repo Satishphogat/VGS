@@ -148,7 +148,7 @@ const style = StyleSheet.create({
     top: 10,
     left: 0,
     right: 0,
-    height: 70,
+    flex: 1,
     marginHorizontal: 25,
     borderRadius: 5
   },
