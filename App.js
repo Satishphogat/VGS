@@ -29,9 +29,9 @@ export default class Login extends Component {
       case 'login':
         checkLoginValidation()
       case 'forgotPassword':
-          break
+        break
       case 'showPassword':
-            this.setState({isPasswordSecure: !this.state.isPasswordSecure})
+        this.setState({ isPasswordSecure: !this.state.isPasswordSecure })
     }
 
     checkLoginValidation = () => {
@@ -51,6 +51,8 @@ export default class Login extends Component {
     return (
 
       <View style={style.container}>
+        
+        <Image source={require('./Assets/home.jpeg')} style={{ top:0, height: Dimensions.get('window').height, left:0, right:0 }}></Image>
 
         <View style={style.bottomContainer}>
 
@@ -71,7 +73,7 @@ export default class Login extends Component {
               onChangeText={(text) => {
                 this.setState({ password: text })
               }}
-              secureTextEntry = {this.state.isPasswordSecure}
+              secureTextEntry={this.state.isPasswordSecure}
               value={this.state.password}
               style={style.textInput}>
             </TextInput>
@@ -130,7 +132,8 @@ const style = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: 'gray'
+    //backgroundColor: 'gray',
+    flexDirection: 'column'
   },
   bottomContainer: {
     backgroundColor: '#f9f9f9',
