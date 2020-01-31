@@ -7,7 +7,7 @@
  */
 
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, Image, Dimensions, TextInput, TouchableOpacity, ScrollView } from 'react-native';
+import { Text, View, StyleSheet, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 
 
 
@@ -15,13 +15,9 @@ export default class ForgotPassword extends Component {
   
   render() {
     return (
-      <ScrollView>
       <View style={style.container}>
-
-        <Image source={require('./Assets/home.jpeg')} style={{ flex: 2 }}></Image>
-
+        <View style={style.textFieldContainer}></View>
       </View>
-      </ScrollView>
     );
   }
 }
@@ -29,9 +25,17 @@ export default class ForgotPassword extends Component {
 const style = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
     alignItems: "center",
-    //backgroundColor: 'gray',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    backgroundColor: 'green'
+  },
+  textFieldContainer: {
+    top: 10,
+    borderRadius: 2,
+    backgroundColor: 'blue',
+    flexDirection: 'row',
+    paddingHorizontal: 30,
+    alignItems: 'flex-start',
+    flex: 8
   }
 })

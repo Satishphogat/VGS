@@ -17,6 +17,18 @@ const AppNavigator = createStackNavigator(
                 title: 'Forgot Password',
             }
         }
+    },
+    {
+        initialRouteName: 'Login',
+        defaultNavigationOptions: {
+            headerStyle: {
+                backgroundColor: '#344756',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+                fontWeight: 'bold',
+            },
+        },
     }
 );
 

@@ -25,15 +25,16 @@ export default class Login extends Component {
   }
 
   onClickListener(type) {
+    console.log(type)
     switch (type) {
       case 'login':
         checkLoginValidation()
+        break
       case 'forgotPassword':
         this.props.navigation.navigate('ForgotPassword')
         break
       case 'showPassword':
         console.log('showPassword')
-        this.props.navigation.navigate('ForgotPassword')
         this.setState({ isPasswordSecure: !this.state.isPasswordSecure })
     }
 
