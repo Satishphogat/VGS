@@ -13,8 +13,7 @@ import { TextInput } from 'react-native-paper';
 export default class ForgotPassword extends Component {
  
   state = {
-    email : '',
-    isValidEmail : false
+    email : ''
   }
 
   onClickListener() {

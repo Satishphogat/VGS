@@ -65,6 +65,7 @@ export default class Login extends Component {
                 this.setState({ username: text })
               }}
               value={this.state.username}
+              returnKeyType = 'next'
               style={style.textInput}>
             </TextInput>
           </View>
@@ -77,6 +78,7 @@ export default class Login extends Component {
               }}
               secureTextEntry={this.state.isPasswordSecure}
               value={this.state.password}
+              returnKeyType='done'
               style={style.textInput}>
             </TextInput>
           </View>
