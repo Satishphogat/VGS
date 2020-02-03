@@ -135,13 +135,11 @@ const style = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    //backgroundColor: 'gray',
     flexDirection: 'column'
   },
   bottomContainer: {
     backgroundColor: '#f9f9f9',
     position: 'absolute',
-    //top: (Dimensions.get('window').height / 2) + 20,
     left: 0,
     right: 0,
     bottom: 0,
