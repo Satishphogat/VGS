@@ -14,8 +14,7 @@ export default class ForgotPassword extends Component {
   render() {
     return (
         <View style={style.container}>
-        <Text style={{marginHorizontal: 10, marginTop: 30, paddingHorizontal: 0, width: Dimensions.get('window').width - 20
-}}>SELECT ONE NUMBER TO RECEIVE OTP ON {"\n"}
+        <Text style={{marginHorizontal: 20, marginTop: 30}}>SELECT ONE NUMBER TO RECEIVE OTP ON {"\n"}
         THAT NUMBER</Text>
 
         <FlatList
@@ -32,18 +31,15 @@ export default class ForgotPassword extends Component {
 
 const style = StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: "center",
     flexDirection: 'column',
     backgroundColor: '#F2F2F2',
     fontSize: 20,
+    width: '80%'
   },
   item: {
-   padding: 10,
    fontSize: 20,
    fontWeight: 'bold',
    height: 44,
-   paddingHorizontal: 10,
-   width: Dimensions.get('window').width - 10
  },
 })
