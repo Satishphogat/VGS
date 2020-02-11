@@ -11,7 +11,7 @@ import { Text, View, StyleSheet, TouchableOpacity, ScrollView, Dimensions } from
 import { TextInput } from 'react-native-paper';
 
 export default class ForgotPassword extends Component {
- 
+
   state = {
     email : ''
   }
@@ -19,10 +19,8 @@ export default class ForgotPassword extends Component {
   onClickListener() {
     if (this.state.email == "") {
       alert('Please enter email id.')
-    } else if (!validateIsEmail(this.state.email)) {
-      alert('Please enter valid email id')
     } else {
-      alert('success')
+      this.props.navigation.navigate('MobileNumberList')
     }
   }
 
@@ -32,7 +30,7 @@ export default class ForgotPassword extends Component {
 
         <View style={style.container}>
 
-          <TextInput mode='outlined' theme={{colors: {primary: '#FF9A00'}}} label='Email' style={style.textFieldContainer} returnKeyType='done' keyboardType='email-address' autoCapitalize='none' onChangeText={(text) => this.setState({email: text})} value={this.state.email}></TextInput>
+          <TextInput mode='outlined' theme={{colors: {primary: '#FF9A00'}}} label='Username' style={style.textFieldContainer} returnKeyType='done' keyboardType='email-address' autoCapitalize='none' onChangeText={(text) => this.setState({email: text})} value={this.state.email}></TextInput>
 
           <Text style={style.staticTextStyle}>Enter your username here, you will receive otp on your registered mobile number.</Text>
 

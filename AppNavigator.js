@@ -2,6 +2,7 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import Login from './Login';
 import ForgotPassword from './ForgotPassword';
+import MobileNumberList from './MobileNumberList'
 
 const AppNavigator = createStackNavigator(
     {
@@ -11,11 +12,17 @@ const AppNavigator = createStackNavigator(
                 header: null,
             }
         },
-        ForgotPassword: { 
+        ForgotPassword: {
             screen: ForgotPassword,
             navigationOptions: {
                 title: 'Forgot Password',
             }
+        },
+        MobileNumberList: {
+          screen: MobileNumberList,
+          navigationOptions: {
+            title: ''
+          }
         }
     },
     {
