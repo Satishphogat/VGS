@@ -18,7 +18,7 @@ export default class ForgotPassword extends Component {
 
   onClickListener() {
     if (this.state.email == "") {
-      alert('Please enter email id.')
+      alert('Please enter username.')
     } else {
       this.props.navigation.navigate('MobileNumberList')
     }

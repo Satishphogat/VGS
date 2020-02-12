@@ -3,6 +3,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import Login from './Login';
 import ForgotPassword from './ForgotPassword';
 import MobileNumberList from './MobileNumberList'
+import Test from './Test'
 
 const AppNavigator = createStackNavigator(
     {
@@ -23,6 +24,12 @@ const AppNavigator = createStackNavigator(
           navigationOptions: {
             title: ''
           }
+        },
+        Test: {
+            screen: Test,
+            navigationOptions: {
+                title: 'Test'
+            }
         }
     },
     {

@@ -11,35 +11,71 @@ import { Text, View, StyleSheet, TouchableOpacity, ScrollView, Dimensions, FlatL
 
 export default class ForgotPassword extends Component {
 
+  onClickListener() {
+    console.log('success')
+  }
+
+  FlatListItemSeparator = () => {
+    return (
+      <View
+        style={{
+          height: 1,
+          marginHorizontal: 20,
+          backgroundColor: "#E9EAEC",
+        }}
+      />
+    );
+  }
+
   render() {
     return (
-        <View style={style.container}>
-        <Text style={{marginHorizontal: 20, marginTop: 30}}>SELECT ONE NUMBER TO RECEIVE OTP ON {"\n"}
+      <View style={style.container}>
+        <Text style={style.staticText}>SELECT ONE NUMBER TO RECEIVE OTP ON
         THAT NUMBER</Text>
 
         <FlatList
-        data = {[
-          {key: 'abc'},
-          {key: 'xyz'}
+          style={style.flatList}
+          data={[
+            { key: '9887545422' },
+            { key: '9887545425' }
           ]}
-          renderItem = {({item}) => <Text style={style.item}>{item.key}</Text>}
+
+          ItemSeparatorComponent = { this.FlatListItemSeparator }
+
+          renderItem={({ item }) =>
+            <TouchableOpacity onPress={() => this.onClickListener()} >
+              <Text style={style.item}>{item.key}</Text>
+            </TouchableOpacity>
+          }
         />
-        </View>
+      </View>
     );
   }
 }
 
 const style = StyleSheet.create({
   container: {
-    alignItems: "center",
+    flex: 1,
     flexDirection: 'column',
     backgroundColor: '#F2F2F2',
-    fontSize: 20,
-    width: '80%'
+  },
+  staticText: {
+    height: 90,
+    color: 'gray',
+    fontSize: 16,
+    paddingTop: 30,
+    paddingLeft: 20
+  },
+  flatList: {
+    backgroundColor: 'white',
+    height: 100,
+    flexGrow: 0
   },
   item: {
-   fontSize: 20,
-   fontWeight: 'bold',
-   height: 44,
- },
+    fontSize: 18,
+    fontWeight: 'bold',
+    height: 50,
+    paddingLeft: 20,
+    paddingTop: 10
+  },
 })
