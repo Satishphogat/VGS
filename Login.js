@@ -165,3 +165,7 @@ const style = StyleSheet.create({
     borderRadius: 5
   }
 })
+
+export const textInputFontSize = () => {
+  return 24
+}

@@ -44,7 +44,7 @@ export default class ForgotPassword extends Component {
 
         <Text style={style.enterOtpStaticText}>Enter OTP sent to</Text>
         <Text style={style.mobileNumber}>9889779878</Text>
-        <TextInput style={style.textInput} onChangeText = {(text) => this.setState({otp: text})} />
+        <TextInput style={style.textInput} onChangeText = {(text) => this.setState({otp: text})} keyboardType='number-pad' maxLength={6} />
 
           <TouchableOpacity style={style.orangeButton} onPress={() => this.onClickListener('verifyOtp')}>
             <Text style={style.loginText}>Verify OTP</Text>
