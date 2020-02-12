@@ -20,7 +20,7 @@ export default class ForgotPassword extends Component {
     if (this.state.email == "") {
       alert('Please enter username.')
     } else {
-      this.props.navigation.navigate('MobileNumberList')
+      this.props.navigation.navigate('VerifyOTP')
     }
   }
 

@@ -5,6 +5,7 @@ import ForgotPassword from './ForgotPassword';
 import MobileNumberList from './MobileNumberList'
 import Test from './Test'
 import ChangePassword from './ChangePassword'
+import VerifyOTP from './VerifyOTP'
 
 const AppNavigator = createStackNavigator(
     {
@@ -37,6 +38,12 @@ const AppNavigator = createStackNavigator(
             navigationOptions: {
                 title: 'Change Password'
             }
+        },
+        VerifyOTP: {
+          screen: VerifyOTP,
+          navigationOptions: {
+            title: 'Verify OTP'
+          }
         }
     },
     {
