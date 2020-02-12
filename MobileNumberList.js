@@ -13,6 +13,7 @@ export default class ForgotPassword extends Component {
 
   onClickListener() {
     console.log('success')
+    this.props.navigation.navigate('ChangePassword')
   }
 
   FlatListItemSeparator = () => {

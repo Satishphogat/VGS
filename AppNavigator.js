@@ -4,6 +4,7 @@ import Login from './Login';
 import ForgotPassword from './ForgotPassword';
 import MobileNumberList from './MobileNumberList'
 import Test from './Test'
+import ChangePassword from './ChangePassword'
 
 const AppNavigator = createStackNavigator(
     {
@@ -29,6 +30,12 @@ const AppNavigator = createStackNavigator(
             screen: Test,
             navigationOptions: {
                 title: 'Test'
+            }
+        },
+        ChangePassword: {
+            screen: ChangePassword,
+            navigationOptions: {
+                title: 'Change Password'
             }
         }
     },
