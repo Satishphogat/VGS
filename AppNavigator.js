@@ -6,6 +6,7 @@ import MobileNumberList from './MobileNumberList'
 import Test from './Test'
 import ChangePassword from './ChangePassword'
 import VerifyOTP from './VerifyOTP'
+import Dashboard from './Dashboard'
 
 const AppNavigator = createStackNavigator(
     {
@@ -44,7 +45,13 @@ const AppNavigator = createStackNavigator(
           navigationOptions: {
             title: 'Verify OTP'
           }
-        }
+        },
+        Dashboard: {
+            screen: Dashboard,
+            navigationOptions: {
+              headerShown: false
+            }
+          }
     },
     {
         initialRouteName: 'Login',
