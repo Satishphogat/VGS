@@ -54,7 +54,7 @@ const style = StyleSheet.create({
   textFieldContainer: {
     top: 30,
     width: '80%',
-    fontSize: 16,
+    fontSize: 22,
   },
   staticTextStyle: {
     color: 'gray',
@@ -76,6 +76,6 @@ const style = StyleSheet.create({
   },
 })
 
-export function validateIsEmail(email) {
-  return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+export function textInputFont() {
+  return 24;
 }

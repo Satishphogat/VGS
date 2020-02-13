@@ -225,7 +225,7 @@ PODS:
     - React
   - RNReanimated (1.7.0):
     - React
-  - RNScreens (2.0.0-alpha.34):
+  - RNScreens (2.0.0-alpha.32):
     - React
   - RNVectorIcons (6.6.0):
     - React
@@ -268,7 +268,7 @@ DEPENDENCIES:
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/cocoapods/specs.git:
     - boost-for-react-native
 
 EXTERNAL SOURCES:
@@ -365,10 +365,10 @@ SPEC CHECKSUMS:
   RNCMaskedView: e5b99bc191945f157adeede68da9d424462de177
   RNGestureHandler: 02905abe54e1f6e59c081a10b4bd689721e17aa6
   RNReanimated: 031fe8d9ea93c2bd689a40f05320ef9d96f74d7f
-  RNScreens: 9d8a2900cd4f967af70dbfed74b64f77fbb6600a
+  RNScreens: a55364dc1833101f836cee70975ce1fea615a12f
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
 PODFILE CHECKSUM: 05a191178b13d4b8c75fa996ce0ae77be1cfa9d5
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.7.4

@@ -51,7 +51,7 @@ const style = StyleSheet.create({
   },
   textInput: {
     height: 35,
-    fontSize: 16,
+    fontSize: 22,
   },
   getOtpText: {
     textAlign: 'center', fontSize: 22, color: 'white'

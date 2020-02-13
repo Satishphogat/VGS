@@ -12,7 +12,7 @@ const AppNavigator = createStackNavigator(
         Login: {
             screen: Login,
             navigationOptions: {
-                header: null,
+                headerShown: false,
             }
         },
         ForgotPassword: {

@@ -82,7 +82,8 @@ const style = StyleSheet.create({
     top: 30,
     borderWidth: 0.5,
     height: 50,
-    borderRadius: 5
+    borderRadius: 5,
+    fontSize: 22
   },
   loginText: {
     textAlign: 'center', fontSize: 24, color: 'white'
