@@ -25,7 +25,7 @@ export default class ChangePassword extends Component {
     } else if (this.state.newPassword != this.state.confirmPassword) {
       alert('New password and confirm password must be same')
     } else {
-      alert('success')
+       this.props.navigation.navigate('Login')
     }
   }
 
@@ -51,7 +51,8 @@ const style = StyleSheet.create({
   },
   textInput: {
     height: 35,
-    fontSize: 22,
+    fontSize: 20,
+    fontWeight: '400'
   },
   getOtpText: {
     textAlign: 'center', fontSize: 22, color: 'white'

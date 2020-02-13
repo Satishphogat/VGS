@@ -69,14 +69,14 @@ const style = StyleSheet.create({
   },
   flatList: {
     backgroundColor: 'white',
-    height: 100,
+    height: 120,
     flexGrow: 0
   },
   item: {
     fontSize: 18,
     fontWeight: 'bold',
-    height: 50,
+    height: 60,
     paddingLeft: 20,
-    paddingTop: 10
+    paddingTop: 15
   },
 })

@@ -58,8 +58,8 @@ const style = StyleSheet.create({
   },
   staticTextStyle: {
     color: 'gray',
-    fontSize: 16,
-    top: 40,
+    fontSize: 18,
+    top: 50,
     marginHorizontal: '0%',
     width: '80%',
   },
@@ -68,7 +68,7 @@ const style = StyleSheet.create({
   },
   getOtpButton: {
     backgroundColor: "#344756",
-    top: 70,
+    top: 80,
     borderRadius: 5,
     justifyContent: 'center',
     width: '80%',
