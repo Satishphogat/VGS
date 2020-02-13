@@ -28,7 +28,7 @@ export default class Login extends Component {
     console.log(type)
     switch (type) {
       case 'login':
-        checkLoginValidation()
+          this.checkLoginValidation()
         break
       case 'forgotPassword':
         this.props.navigation.navigate('ForgotPassword')
@@ -37,7 +37,7 @@ export default class Login extends Component {
         console.log('showPassword')
         this.setState({ isPasswordSecure: !this.state.isPasswordSecure })
     }
-
+  }
     checkLoginValidation = () => {
       if (this.state.username == "") {
         alert('Please enter username')
@@ -45,8 +45,8 @@ export default class Login extends Component {
         alert('Please enter password')
       } else {
         this.isLoginValid = true
+        this.props.navigation.navigate('Dashboard')
       }
-    }
   }
 
   render() {
@@ -62,9 +62,9 @@ export default class Login extends Component {
             <TextInput
               placeholder="Enter Userame"
               onChangeText={(text) => {
-                this.setState({ username: text })
+                console.log(this.state.username)
+                this.setState({username: text})
               }}
-              value={this.state.username}
               returnKeyType = 'next'
               style={style.textInput}>
             </TextInput>
@@ -74,6 +74,7 @@ export default class Login extends Component {
             <TextInput
               placeholder="Enter Password"
               onChangeText={(text) => {
+                console.log(this.state.password)
                 this.setState({ password: text })
               }}
               secureTextEntry={this.state.isPasswordSecure}
