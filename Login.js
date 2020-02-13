@@ -20,7 +20,7 @@ export default class Login extends Component {
       username: '',
       password: '',
       isLoginValid: false,
-      isPasswordSecure: false
+      isPasswordSecure: true,
     };
   }
 
@@ -62,7 +62,6 @@ export default class Login extends Component {
             <TextInput
               placeholder="Enter Userame"
               onChangeText={(text) => {
-                console.log(this.state.username)
                 this.setState({username: text})
               }}
               returnKeyType = 'next'
@@ -74,7 +73,6 @@ export default class Login extends Component {
             <TextInput
               placeholder="Enter Password"
               onChangeText={(text) => {
-                console.log(this.state.password)
                 this.setState({ password: text })
               }}
               secureTextEntry={this.state.isPasswordSecure}
@@ -85,8 +83,9 @@ export default class Login extends Component {
           </View>
 
           <View style={style.passwordContainer}>
-            <TouchableOpacity style={style.forgotPassword} onPress={() => this.onClickListener('showPassword')}>
-              <Text style={style.forgotPassword}>Show Password</Text>
+            <TouchableOpacity style={style.forgotPassword, {flexDirection:"row",alignItems:'center',justifyContent:'center', flex: 1}} onPress={() => this.onClickListener('showPassword')}>
+            <Image source={this.state.isPasswordSecure ? require('./Assets/emptyCheckbox.png') : require('./Assets/filledCheckbox.png')} style={{height: 20, width: 20 }}></Image>
+              <Text style={style.forgotPassword, {flex:1, fontSize: 18}}>  Show Password</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={style.forgotPassword} onPress={() => this.onClickListener('forgotPassword')} >
