@@ -7,8 +7,8 @@
  */
 
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, Image, Dimensions, TextInput, TouchableOpacity, ScrollView } from 'react-native';
-
+import { Text, View, StyleSheet, Image, Dimensions, TextInput, TouchableOpacity, ScrollView, KeyboardAvoidingView } from 'react-native';
+import { Keyboard } from 'react-native';
 
 
 export default class Login extends Component {
@@ -51,14 +51,13 @@ export default class Login extends Component {
 
   render() {
     return (
-      <ScrollView>
-      <View style={style.container}>
-
-        <Image source={require('./Assets/home.jpeg')} style={{ flex: 2 }}></Image>
-
+      <KeyboardAvoidingView style={{flex: 1}} behavior='padding'>
+     
+         <View style={{ flex: 0.5,}}>
+        <Image source={require('./Assets/home.jpeg')} style={{flex: 1}} ></Image>
+        </View>
         <View style={style.bottomContainer}>
-
-          <View style={style.textFieldContainer}>
+        <View style={style.textFieldContainer}>
             <TextInput
               placeholder="Enter Userame"
               onChangeText={(text) => {
@@ -79,6 +78,7 @@ export default class Login extends Component {
               value={this.state.password}
               returnKeyType='done'
               style={style.textInput}>
+              onSubmit={Keyboard.dismiss()}
             </TextInput>
           </View>
 
@@ -94,15 +94,15 @@ export default class Login extends Component {
           </View>
 
           <View>
-            <TouchableOpacity style={style.orangeButton} onPress={() => this.onClickListener('login')}>
+            <TouchableOpacity style={style.orangeButton} onPress={() => this.onClickListener('login')} >
               <Text style={style.loginText}>Login</Text>
             </TouchableOpacity>
           </View>
 
-        </View>
+        </View> 
+        
 
-      </View>
-      </ScrollView>
+      </KeyboardAvoidingView>
     );
   }
 }
@@ -137,15 +137,11 @@ const style = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    flexDirection: 'column'
+    flexDirection: 'column',
+    backgroundColor: 'green'
   },
   bottomContainer: {
-    backgroundColor: '#f9f9f9',
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    bottom: 0,
-    flex: 2
+    flex: 0.5
   },
   textFieldContainer: {
     position: 'absolute',
